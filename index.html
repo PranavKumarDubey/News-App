@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-logo">
+            <img class="logo" onclick="reload()" src="./logo/Global_News.svg.png" alt="Compnay logo">
+        </div>
+        <div class="nav-link">
+            <ul class="nav-links">
+                <li class="hover-links" id="science" onclick="onNavItem('science')">Science</li>
+                <li class="hover-links" id="finance"  onclick="onNavItem('finance')">Finence</li>
+                <li class="hover-links" id="technology" onclick="onNavItem('technology')">Technology</li>
+                <li class="hover-links" id="sports" onclick="onNavItem('sports')">Sports</li>
+            </ul>
+        </div>
+        <div class="search-bar">
+            <input type="text"  class="news-input" placeholder="e.g. Science">
+            <button class="search-button">Search</button>
+        </div>
+    </div>
+
+<!-- Hero-Section -->
+
+       <div class="hero-section">
+        <div class="cards-container" id="news-container">
+        </div>  
+            <template id="news-template">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://support.primaryimage.uk/wp-content/uploads/2017/07/400x200.png " alt="news-image"
+                            id="news-img">
+                    </div>
+                    <div class="card-content">
+                        <h4 id="news-title">This is the tittle </h4>
+                        <h6 class="news-source" id="news-source">End Gadeget</h6>
+                        <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </template>
+        
+       </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
